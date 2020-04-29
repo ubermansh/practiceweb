@@ -1,0 +1,21 @@
+#DB접속정보
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:oracle:thin:@localhost:1521/xe
+    username: practice
+    password: 1234
+
+#서버포트
+server:
+  port: 8088
+
+#서버 자동 재시작
+devtools:
+  livereload:
+    enabled: true
+
+#타임리프 새로고침 반영
+spirng:
+  thymeleaf:
+    cache: false

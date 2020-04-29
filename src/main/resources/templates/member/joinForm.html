@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Bin's Project Join</title>
+</head>
+<body>
+    <form th:action="@{/member/joinProc}" method="post">
+        이메일 <input type="text" name="email">
+        암호 <input type="password" name="pwd">
+        닉네임 <input type="text" name="nickname">
+        핸드폰번호 <input type="text" name="phone">
+        <input type="number" name="type" value="1" hidden>
+        <input type="submit" value="가입">
+    </form>
+</body>
+</html>
