@@ -62,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/**").permitAll()
 
                 // 회원가입 페이지 권한없이 접근 가능
-                .antMatchers("/member/join").permitAll()
+//                .antMatchers("/member/member").permitAll()
 
                 // 모든 요청에 대해, 인증된 사용자만 접근하도록 설정(필터)
                 .anyRequest().authenticated()
@@ -80,7 +80,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .passwordParameter("pwd")
 
             // SpringSecurity가 제공해주는 폼을 사용안할 거면 .loginPage()로 URL 지정
-            .loginPage("/member/login")
+            .loginPage("/member/member")
 
             // form action의 경로와 일치 시켜줘야 한다.
             .loginProcessingUrl("/member/loginProc")
@@ -97,7 +97,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
 
             // 로그아웃 성공시 경로
-//          .logoutSuccessUrl("/")
+          .logoutSuccessUrl("/")
 
              // 로그아웃 하면 Session 초기화 해주기
             .invalidateHttpSession(true)

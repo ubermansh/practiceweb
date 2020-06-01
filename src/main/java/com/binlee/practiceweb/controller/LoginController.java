@@ -15,10 +15,10 @@ public class LoginController {
     MemberService memberService;
 
 
-    @RequestMapping(value = "/member/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/member/member", method = RequestMethod.GET)
     public String loginForm(){
         logger.info("로그인페이지 진입");
-        return "/member/loginForm";
+        return "/member/member";
     }
 
     @RequestMapping(value="/admin", method = RequestMethod.GET)
@@ -28,7 +28,7 @@ public class LoginController {
 
     @RequestMapping(value="/member/logout")
     public String logout(){
-        return "/member/loginForm";
+        return "/main";
     }
 
     @RequestMapping(value="/member/denied")

@@ -2,7 +2,7 @@ package com.binlee.practiceweb.service;
 
 
 import com.binlee.practiceweb.dto.Member;
-import org.springframework.security.core.userdetails.UserDetailsService;
+        import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface MemberService extends UserDetailsService {
 

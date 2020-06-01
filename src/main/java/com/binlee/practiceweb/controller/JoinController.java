@@ -18,12 +18,6 @@ public class JoinController {
         this.memberService = memberService;
     }
 
-    // 회원가입 페이지
-    @RequestMapping(value="/member/join", method = RequestMethod.GET)
-    public String Join(){
-        return "/member/joinForm";
-    }
-
     // 회원가입 처리
     @RequestMapping(value="/member/joinProc", method = RequestMethod.POST)
     public String joinProc(Member member){

@@ -9,9 +9,8 @@
 <body>
     <h1>메인페이지</h1>
     <div>
-        <a sec:authorize="isAnonymous()" th:href="@{/member/login}">로그인</a>
+        <a sec:authorize="isAnonymous()" th:href="@{/member/member}">로그인/회원가입</a>
         <a sec:authorize="isAuthenticated()" th:href="@{/member/logout}">로그아웃</a>
-        <a sec:authorize="isAnonymous()" th:href="@{/member/join}">회원가입</a>
         <a sec:authorize="hasRole('ROLE_USER')" th:href="@{/member/info}">내 정보</a>
         <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin}">관리자</a>
     </div>
